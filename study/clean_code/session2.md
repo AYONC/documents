@@ -5,6 +5,8 @@
 
 어떤 프로그램이든 기본적인 단위가 함수다.
 
+
+이상한 
 ```java
 public static String testableHtml(PageData pageData, boolean includeSuiteSetup) {
   WikiPage wikiPage = pageData.getWikiPage();
@@ -57,13 +59,23 @@ public static String testableHtml(PageData pageData, boolean includeSuiteSetup) 
   return pageData.getHtml();
 }
 ```
+길이가 길고,
+중복된 코드에,
+괴상한 문자열에,
+낯설고 모호한 자료 유형과 API,
+다양한 추상화 수준,
+중첩된 if문.
 
-길이가 길고, 중복된 코드에, 괴상한 문자열에, 낯설고 모호한 자료 유형의 코드로 이루어진 함수는 이해하기에 많은 어려움이 따른다. 그렇다면 읽시 쉽고 이해하기 쉬운 함수는 어떻게 작성해야하는가?
+그렇다면 읽시 쉽고 이해하기 쉬운 함수는 어떻게 작성해야하는가?
 
 
 ## 작게 만들어라!
 
 #### 함수를 만들 때 최대한 ‘작게!’ 만들어라.
+
+가로 140자 이내,
+100줄을 넘어가지 않도록.
+
 ```java
 public static String renderPageWithSetupsAndTeardowns( PageData pageData, boolean isSuite) throws Exception {
 	boolean isTestPage = pageData.hasAttribute("Test"); 
@@ -95,12 +107,14 @@ public static String renderPageWithSetupsAndTeardowns( PageData pageData, boolea
 
 ## 한 가지만 해라  
 
-함수는 한가지를 해야 한다. 그 한가지를 잘 해야 한다. 그 한가지만을 해야 한다.
+**함수는 한가지를 해야 한다. 
+그 한가지를 잘 해야 한다. 
+그 한가지만을 해야 한다.**
 
 지정된 함수 이름 아래에서 추상화 수준이 하나인 단계만 수행한다면 그 함수는 한 가지 작업만 하는 것이다.
 
 #### 함수 내 섹션  
-함수를 여러 섹션으로 나눌 수 있다면 그 함수는 여러작업을 하는 셈이다.
+함수 내부를 여러 섹션으로 나눌 수 있다면 그 함수는 여러작업을 하는 셈이다.
 
 
 ## 함수 당 추상화 수준은 하나로
@@ -113,6 +127,9 @@ public static String renderPageWithSetupsAndTeardowns( PageData pageData, boolea
 
 
 ## Switch문
+
+Switch문은 작게 만들기 어렵다.
+Switch문은 N가지를 처리한다.
 
 ```java
 public Money calculatePay(Employee e) throws InvalidEmployeeType {
@@ -129,7 +146,7 @@ public Money calculatePay(Employee e) throws InvalidEmployeeType {
 }
 ```
 
-switch문은 작게 만들기 어렵지만(if/else의 연속 도 마찬가지!), 다형성을 이용하여 switch문을 abstract factory에 숨겨 다형적 객체를 생성하는 코드 안에서만 switch를 사용하도록 한다. 
+ 다형성을 이용하여 switch문을 abstract factory에 숨겨 다형적 객체를 생성하는 코드 안에서만 switch를 사용하도록 한다. 
 
 ```java
 public abstract class Employee {
@@ -163,9 +180,23 @@ public class EmployeeFactoryImpl implements EmployeeFactory {
 ## 서술적인 이름을 사용하라!  
 > “코드를 읽으면서 짐작했던 기능을 각 루틴이 그대로 수행한다면 깨끗한 코드라 불러도 되겠다” - 워드
 
-작은 함수는 그 기능이 명확하므로 이름을 붙이기가 더 쉬우며, 일관성 있는 서술형 이름을 사용한다면 코드를 순차적으로 이해하기도 쉬워진다.
+작은 함수는 그 기능이 명확하므로 이름을 붙이기가 더 쉬우며,
+일관성 있는 서술형 이름을 사용한다면 코드를 순차적으로 이해하기도 쉬워진다.
 
-## 함수 인수  
+```java
+testableHtml -> SetupTeardownIncluder.render
+```
+서술적인 이름을 사용하면 설계가 뚜렸해지므로 코드를 개선하기 쉬워진다.
+
+```java
+includeSetupAndTeardownPages
+includeSetupPages
+includeSuiteSetupPage
+includeSetupPage
+```
+
+
+## 함수 인수 
 함수에서 이상적인 인수 개수는 0개(무항).
 인수는 코드 이해에 방해가 되는 요소이므로 최선은 0개이고, 차선은 1개뿐인 경우이다.
 출력인수(함수의 반환 값이 아닌 입력 인수로 결과를 받는 경우)는 이해하기 어려우므로 왠만하면 쓰지 않는 것이 좋겠다.
@@ -196,6 +227,11 @@ Point 클래스의 경우에는 이항 함수가 적절하다.
 #### 인수 객체  
 인수가 많이 필요할 경우, 일부 인수를 독자적인 클래스 변수로 선언할 가능성을 살펴보자
 x,y를 인자로 넘기는 것보다 Point를 넘기는 것이 더 낫다.
+
+```java
+Circle makeCircle(double x, double y, double radius)
+Circle makeCircle(Point center, double radius)
+```
 
 #### 인수 목록  
 때로는 String.format같은 함수들처럼 인수 개수가 가변적인 함수도 필요하다. 
