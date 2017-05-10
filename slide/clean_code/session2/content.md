@@ -163,20 +163,29 @@ public static String renderPageWithSetupsAndTeardowns( PageData pageData, boolea
 
 -----
 
-#### 함수 내 섹션
-함수 내부를 여러 **섹션**으로 나눌 수 있다면 그 함수는 여러작업을 하는 셈이다.
+### 함수 내 섹션
+
+함수 내부를 여러 **섹션**으로 나눌 수 있다면
+
+그 함수는 여러작업을 하는 셈이다.
 
 -----
 
 ## 함수 당 추상화 수준은 하나로
 
-함수가 ‘한가지’ 작업만 하려면 함수 내 모든 문장의 **추상화 수준이 동일**해야된다.
+함수가 ‘한가지’ 작업만 하려면
+
+함수 내 모든 문장의 **추상화 수준이 동일**해야된다.
+
+
+`pageData.getHtml()`
+`pathParser.render(pagePath)`
 
 만약 한 함수 내에 추상화 수준이 섞이게 된다면 읽는 사람이 헷갈린다.
 
 -----
 
-#### 위에서 아래로 코드 읽기:**내려가기** 규칙
+### 위에서 아래로 코드 읽기:**내려가기** 규칙
 
 코드는 위에서 아래로 이야기처럼 읽혀야 좋다.
 
@@ -253,6 +262,13 @@ public class EmployeeFactoryImpl implements EmployeeFactory {
 ## 서술적인 이름을 사용하라!
 > “코드를 읽으면서 짐작했던 기능을 각 루틴이 그대로 수행한다면 깨끗한 코드라 불러도 되겠다” - 워드
 
+```java
+includeSetupAndTeardownPages
+includeSetupPages
+includeSuiteSetupPage
+includeSetupPage
+```
+
 -----
 
 작은 함수는 그 기능이 명확하므로 이름을 붙이기가 더 쉬우며,
@@ -267,15 +283,6 @@ testableHtml -> SetupTeardownIncluder.render
 
 -----
 
-```java
-includeSetupAndTeardownPages
-includeSetupPages
-includeSuiteSetupPage
-includeSetupPage
-```
-
------
-
 ## 함수 인수
 
 함수에서 이상적인 인수 개수는 0개(무항).
@@ -286,7 +293,7 @@ includeSetupPage
 
 -----
 
-#### 많이 쓰는 단항 형식
+### 많이 쓰는 단항 형식
   * 인수에 질문을 던지는 경우
 	`boolean fileExists(“MyFile”);`
   * 인수를 뭔가로 변환해 결과를 변환하는 경우
@@ -297,10 +304,11 @@ includeSetupPage
 
 -----
 
-#### 플래그 인수
+### 플래그 인수
 
 플래그 인수는 추하다. 쓰지마라.
-
+`render(true)`
+`render(boolean inSuite)`
 bool 값을 넘기는 것 자체가 그 함수는 한꺼번에 여러가지 일을 처리한다고 공표하는 것과 마찬가지다.
 
 -----
@@ -320,6 +328,8 @@ Point 클래스의 경우에는 이항 함수가 적절하다.
 -----
 
 #### 삼항 함수
+
+`assertEquals(message, expected, actual)`
 
 이항 함수보다 이해하기가 훨씬 어려우므로, 위험도 2배 이상 늘어난다.
 
@@ -343,6 +353,8 @@ Circle makeCircle(Point center, double radius)
 #### 인수 목록
 
 때로는 String.format같은 함수들처럼 인수 개수가 가변적인 함수도 필요하다.
+
+`public String format(String format, Object... args)`
 
 String.format의 인수는 List형 인수이기 때문에 이항함수라고 할 수 있다.
 
@@ -382,7 +394,7 @@ public class UserValidator {
 			String codedPhrase = user.getPhraseEncodedByPassword();
 			String phrase = cryptographer.decrypt(codedPhrase, password);
 			if ("Valid Password".equals(phrase)) {
-				Session.initialize();
+				**Session.initialize();**
 				return true;
 			}
 		}
@@ -403,11 +415,21 @@ public class UserValidator {
 
 ## 명령과 조회를 분리하라
 
-함수는 뭔가 객체 상태를 변경하거나, 객체 정보를 반환하거나 둘중 하나다. 둘다 수행해서는 안된다.
+함수는
 
-`public boolean set(String attribute, String value);`같은 경우에는 속성 값 설정 성공 시 true를 반환하므로 괴상한 코드가 작성된다.
+<span class="yellow">객체 상태를 변경</span>하거나, <!-- .element: class="fragment" -->
 
-`if(set(“username”, “unclebob”))...` 그러므로 명령과 조회를 분리해 혼란을 주지 않도록 한다.
+<span class="yellow">객체 정보를 반환</span>하거나 <!-- .element: class="fragment" -->
+
+**둘다 수행해서는 안된다.**  <!-- .element: class="fragment" -->
+
+-----
+
+`if(set(“username”, “unclebob”))...`
+
+`public boolean set(String attribute, String value);` <!-- .element: class="fragment" -->
+
+혼란스럽다... <!-- .element: class="fragment" -->
 
 -----
 
@@ -438,7 +460,9 @@ if (deletePage(page) == E_OK) {
 
 -----
 
-정상 작동과 오류 처리 동작을 뒤섞는 추한 구조이므로 if/else와 마찬가지로 블록을 별도 함수로 뽑아내는 편이 좋다.
+정상 작동과 오류 처리 동작을 뒤섞는 추한 구조
+
+    -> if/else와 마찬가지로 블록을 별도 함수로 뽑아내는 편이 좋다.
 
 -----
 
@@ -464,10 +488,6 @@ private void logError(Exception e) {
 
 -----
 
-오류 처리도 한가지 작업이다.
-
-Error.java 의존성 자석
-
 ```java
 public enum Error {
 	OK,
@@ -479,27 +499,41 @@ public enum Error {
 }
 ```
 
+Error.java 의존성 자석이 생긴다.  <!-- .element: class="fragment" -->
+
 -----
 
-오류를 처리하는 곳곳에서 오류코드를 사용
+<h4>오류를 처리하는 곳곳에서 오류코드를 사용</h4>
 
- -> enum class를 쓰게 되는데 이런 클래스는 의존성 자석이므로, 새 오류코드를 추가하거나 변경할 때 비용이 많이 필요하다.
+ -> 새 오류코드를 추가하거나 변경할 때 비용이 많이 필요하다.
 
 **그러므로 예외를 사용하는 것이 더 안전하다.**
 
 -----
 
-## 반복하지 마라!
+## 반복하지 마라! DRY<small>Don't repeat yourself</small>
 
-중복은 모든 소프트웨어에서 모든 악의 근원이므로 늘 중복을 없애도록 노력해야한다.
+**중복은 모든 소프트웨어에서 모든 악의 근원이므로 늘 중복을 없애도록 노력해야한다.**
+
+-----
+
+<h4> 중복제거 전략 </h4>
+
+* 관계형 데이터 베이스 정규 형식
+
+* 객체 지향 프로그래밍 상속 개념
+
+* 구조적프로그래밍
+
+* AOP<small>Aspect Oriented Programming</small>
+
+* COP<small>component oriented Programming</small>
 
 -----
 
 ## 구조적 프로그래밍
 
-다익스크라x
-
-데이크스트라o
+에르허츠 데이크스트라<small>다익스크라x/데이크스트라o</small>
 
 구조적 프로그래밍의 원칙을 따르자면 모든 함수와 함수 내 모든 블록에 입구와 출구가 하나
 
@@ -519,13 +553,40 @@ public enum Error {
 
 ## 함수를 어떻게 짜죠?
 
+**글짓기와 비슷하다.**
+
 처음에는 길고 복잡하고, 들여쓰기 단계나 중복된 루프도 많다.
 
-인수목록도 길지만, 이 코드들을 빠짐없이 테스트하는 단위 테스트 케이스도 만들고,
+인수목록도 길지만,
 
-코드를 다듬고, 함수를 만들고, 이름을 바꾸고, 중복을 제거한다.
+-----
 
-처음부터 탁 짜지지는 않는다.
+단위 테스트 케이스도 만들고, <!-- .element: class="fragment" -->
+
+코드를 다듬고, <!-- .element: class="fragment" -->
+
+함수를 만들고, <!-- .element: class="fragment" -->
+
+이름을 바꾸고, <!-- .element: class="fragment" -->
+
+중복을 제거하고 <!-- .element: class="fragment" -->
+
+메서드를 줄이고 순서를 바꾸고 <!-- .element: class="fragment" -->
+
+클래스를 쪼개기도한다. <!-- .element: class="fragment" -->
+
+처음부터 완벽한 형태일 수 없다 <!-- .element: class="fragment" -->
+
+-----
+
+## 결론
+
+**시스템은 구현할 프로그램이 아닌, 풀어갈 이야기**
+
+프로그래밍 언어라는 표현 수단을 통해 <span class="yellow">소통 언어(함수)</span>를 만들고
+
+함수를 잘 만드는 <span class="green">기교를 통해 자신만의 이야기를 풀어나가자.</span>
+
 
 -----
 
