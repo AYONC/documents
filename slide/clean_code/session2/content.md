@@ -179,11 +179,9 @@ public static String renderPageWithSetupsAndTeardowns( PageData pageData, boolea
 
  <!-- .element: class="fragment" -->
 ```
-`pageData.getHtml()`
-`pathParser.render(pagePath)`
+pageData.getHtml()
+pathParser.render(pagePath)
 ```
- <!-- .element: class="fragment" -->
-만약 한 함수 내에 추상화 수준이 섞이게 된다면 읽는 사람이 헷갈린다.
 
 -----
 
