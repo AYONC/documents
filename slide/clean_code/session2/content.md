@@ -449,18 +449,24 @@ public class UserValidator {
 
 -----
 
+```
 `if(set(“username”, “unclebob”))...`
 
 `public boolean set(String attribute, String value);` <!-- .element: class="fragment" -->
+```
 
-혼란스럽다... <!-- .element: class="fragment" -->
+<div>혼란스럽다... </div><!-- .element: class="fragment" -->
 
 -----
 
 ## 오류코드보다 예외를 사용하라!
 
 
-try/catch를 사용하면 오류 처리 코드가 원래 코드에서 분리되므로 코드가 깔끔해 진다.
+try/catch를 사용하면
+
+오류 처리 코드가 원래 코드에서 분리되므로
+
+코드가 깔끔해 진다.
 
 -----
 
