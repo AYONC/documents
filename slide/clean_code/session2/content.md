@@ -441,9 +441,9 @@ public class UserValidator {
 
 함수는
 
-<div> <span class="yellow">객체 상태를 변경</span>하거나, </div><!-- .element: class="fragment" -->
+<div class="fragment"> <span class="yellow">객체 상태를 변경</span>하거나, </div>
 
-<div><span class="yellow">객체 정보를 반환</span>하거나</div> <!-- .element: class="fragment" -->
+<div class="fragment"><span class="yellow">객체 정보를 반환</span>하거나</div>
 
 **둘다 수행해서는 안된다.**  <!-- .element: class="fragment" -->
 
