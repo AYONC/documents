@@ -408,8 +408,6 @@ String.format의 인수는 List형 인수이기 때문에 이항함수라고 할
 
 -----
 
-아래 코드에서 `Session.initialize();`는 함수명과는 맞지 않는 부수효과이다.
-
 ```java
 public class UserValidator {
 	private Cryptographer cryptographer;
@@ -443,9 +441,9 @@ public class UserValidator {
 
 함수는
 
-<span class="yellow">객체 상태를 변경</span>하거나, <!-- .element: class="fragment" -->
+<div> <span class="yellow">객체 상태를 변경</span>하거나, </div><!-- .element: class="fragment" -->
 
-<span class="yellow">객체 정보를 반환</span>하거나 <!-- .element: class="fragment" -->
+<div><span class="yellow">객체 정보를 반환</span>하거나</div> <!-- .element: class="fragment" -->
 
 **둘다 수행해서는 안된다.**  <!-- .element: class="fragment" -->
 
