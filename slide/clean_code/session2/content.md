@@ -68,21 +68,21 @@ public static String testableHtml(PageData pageData, boolean includeSuiteSetup) 
 
 
 
-길이가 길고, <!-- .element: class="fragment" --> 
+**길이가 길고,** <!-- .element: class="fragment" -->
 
-중복된 코드에, <!-- .element: class="fragment" --> 
+**중복된 코드에,** <!-- .element: class="fragment" -->
 
-괴상한 문자열에, <!-- .element: class="fragment" --> 
+**괴상한 문자열에,** <!-- .element: class="fragment" -->
 
-낯설고 모호한 자료 유형과 API, <!-- .element: class="fragment" --> 
+**낯설고 모호한 자료 유형과 API,** <!-- .element: class="fragment" -->
 
-다양한 추상화 수준, <!-- .element: class="fragment" --> 
+**다양한 추상화 수준,** <!-- .element: class="fragment" -->
 
 -----
 
 <!-- .slide: data-background="#e7ad52" -->
 
-그렇다면 읽시 쉽고 이해하기 쉬운 함수는 어떻게 작성해야하는가?
+**그렇다면 읽시 쉽고 이해하기 쉬운 함수는 어떻게 작성해야하는가?**
 
 -----
 
@@ -92,9 +92,9 @@ public static String testableHtml(PageData pageData, boolean includeSuiteSetup) 
 
 #### 함수를 만들 때 최대한 ‘작게!’ 만들어라.
 
-가로 140자 이내,
+**가로 140자 이내,** <!-- .element: class="fragment" -->
 
-100줄을 넘어가지 않도록.
+**100줄을 넘어가지 않도록.** <!-- .element: class="fragment" -->
 
 -----
 
