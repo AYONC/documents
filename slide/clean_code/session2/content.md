@@ -5,6 +5,8 @@
 
 어떤 프로그램이든 기본적인 단위가 함수다.
 
+-----
+
 ```java
 public static String testableHtml(PageData pageData, boolean includeSuiteSetup) {
   WikiPage wikiPage = pageData.getWikiPage();
@@ -56,7 +58,10 @@ public static String testableHtml(PageData pageData, boolean includeSuiteSetup) 
   pageData.setContent(buffer.toString());
   return pageData.getHtml();
 }
-```
+``` <!-- .element: style="height:1000px" -->
+
+-----
+
 길이가 길고, <!-- .element: class="fragment" --> 
 
 중복된 코드에, <!-- .element: class="fragment" --> 
@@ -68,6 +73,8 @@ public static String testableHtml(PageData pageData, boolean includeSuiteSetup) 
 다양한 추상화 수준, <!-- .element: class="fragment" --> 
 
 -----
+
+<!-- .slide: data-background="#e7ad52" -->
 
 그렇다면 읽시 쉽고 이해하기 쉬운 함수는 어떻게 작성해야하는가?
 
