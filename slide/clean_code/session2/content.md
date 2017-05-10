@@ -131,6 +131,8 @@ public static String renderPageWithSetupsAndTeardowns( PageData pageData, boolea
 
 각 함수가 명백하다면 함수는 더욱 읽고 이해하기 쉬워진다.
 
+-----
+
 
 ## 한 가지만 해라  
 
