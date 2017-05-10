@@ -395,6 +395,7 @@ String.format의 인수는 List형 인수이기 때문에 이항함수
 ```
 `assertExpectedEqualsActual(expected, actual);`
 ```
+
 -----
 
 ## 부수 효과를 일으키지 마라!
