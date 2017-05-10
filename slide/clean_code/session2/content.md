@@ -373,13 +373,15 @@ Circle makeCircle(Point center, double radius)
 
 #### 인수 목록
 
-때로는 String.format같은 함수들처럼 **인수 개수가 가변적인 함수도 필요**하다.
+때로는 String.format같은 함수들처럼
+
+**인수 개수가 가변적인 함수도 필요**하다.
 
 ```
 `public String format(String format, Object... args)`
 ```
 
-String.format의 인수는 List형 인수이기 때문에 이항함수라고 할 수 있다.
+String.format의 인수는 List형 인수이기 때문에 이항함수
 
 -----
 
