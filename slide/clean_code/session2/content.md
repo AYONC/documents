@@ -400,9 +400,9 @@ String.format의 인수는 List형 인수이기 때문에 이항함수라고 할
 
 -----
 
-<h4>부수효과는 코드에서 거짓말을 하는 것이다.</h4>
+<h4>부수효과는 코드에서 거짓말을 하는 것</h4>
 
-<h4>함수에서 한가지를 하겠다고 약속하고는 남몰래 다른 짓을 하는 것이므로,</h4>
+<h4>함수에서 한가지를 하겠다고 약속하고는 남몰래 다른 짓을 하는 것</h4>
 
 **한 함수에서는 딱 한가지만 수행할 것!**
 
@@ -419,7 +419,7 @@ public class UserValidator {
 			String codedPhrase = user.getPhraseEncodedByPassword();
 			String phrase = cryptographer.decrypt(codedPhrase, password);
 			if ("Valid Password".equals(phrase)) {
-				**Session.initialize();**
+				<span class="yellow">Session.initialize();</span>
 				return true;
 			}
 		}
@@ -432,9 +432,10 @@ public class UserValidator {
 
 #### 출력인수
 
-   일반적으로 출력 인수는 피해야 한다.
+* 일반적으로 출력 인수는 피해야 한다.
 
-   함수에서 상태를 변경해야 한다면 함수가 속한 객체 상태를 변경하는 방식을 택하라.
+* 함수에서 상태를 변경해야 한다면 함수가 속한 객체 상태를 변경하는 방식을 택하라.
+
 
 -----
 
