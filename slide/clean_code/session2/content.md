@@ -1,5 +1,6 @@
 #  Chapter 3. 함수
 
+-----
 
 ## Intro
 
@@ -58,7 +59,8 @@ public static String testableHtml(PageData pageData, boolean includeSuiteSetup) 
   pageData.setContent(buffer.toString());
   return pageData.getHtml();
 }
-``` <!-- .element: style="height:1200px" -->
+```
+<!-- .element: style="height:1200px" -->
 
 
 
