@@ -419,7 +419,7 @@ public class UserValidator {
 			String codedPhrase = user.getPhraseEncodedByPassword();
 			String phrase = cryptographer.decrypt(codedPhrase, password);
 			if ("Valid Password".equals(phrase)) {
-				<span class="yellow">Session.initialize();</span>
+				Session.initialize();
 				return true;
 			}
 		}
