@@ -639,7 +639,9 @@ Error.java 의존성 자석이 생긴다.  <!-- .element: class="fragment" -->
 
 주석은 언제나 실패를 의미
 
-주석 없이는 자신을 표현할 방법을 찾지 못해 *할 수 없이 주석을 사용*
+주석 없이는 자신을 표현할 방법을 찾지 못해 
+
+*할 수 없이 주석을 사용*
 
 -----
 
@@ -653,9 +655,9 @@ Error.java 의존성 자석이 생긴다.  <!-- .element: class="fragment" -->
 
 주석이 오래될수록 코드에서 멀어져서
 
-    > 거짓말을 하게 될 가능성이 커지기 때문
+> 거짓말을 하게 될 가능성이 커지기 때문
 
-    > 주석을 계속 유지보수하기란 현실적으로 불가능
+> 주석을 계속 유지보수하기란 현실적으로 불가능
 
 -----
 
@@ -663,7 +665,7 @@ Error.java 의존성 자석이 생긴다.  <!-- .element: class="fragment" -->
 
 코드에 주석을 추가하는 일반적인 이유
 
-    <span class="yellow">코드 품질이 나빠서</span>
+<span class="yellow">코드 품질이 나빠서</span>
 
 <div>깔끔하고 주석이 거의 없는 코드가,</div>
 <div>복잡하고 어수선하며 주석이 많이 달린 코드보다 훨씬 좋다.</div>
@@ -685,7 +687,7 @@ if ((emplotee.flags & HOURLY_FLAG) && (employee.age > 65)
 if (employee.isEligibleForFullBenefits())
 ```
 
-<div>주석도 필요없이 함수 이름만으로 충분히 깔끔하게 표현가능</div>
+<div>함수 이름만으로 충분히 깔끔하게 표현가능</div>
 
 -----
 
@@ -713,6 +715,7 @@ protected abstract Responder responderInstance();
 ```
 
 **물론 이 주석도 함수 이름에 정보를 담아**
+
 **responderBeingTested로 바꾸면 없앨 수 있다. **
 
 -----
@@ -802,11 +805,14 @@ return buildList(text.substring(match.end()));
 
 하지만 여느 주석과 마찬가지로,
 
+<div class="fragment">
 *독자를 오도하거나,*
 
 *잘못 위치하거나, *
 
 *그릇된 정보를 전달할 가능성이 존재하는 것 역시 잊으면 안 된다.*
+</div>
+
 
 -----
 
@@ -821,7 +827,7 @@ return buildList(text.substring(match.end()));
 
 <div class="fragment"><span class="yellow">엉성한 코드를 변명</span>하거나,</div>
 
-<span class="yellow">미숙한 결정을 합리화</span><!-- .element: class="fragment" -->
+<div class="fragment"><span class="yellow">미숙한 결정을 합리화</span><div class="fragment">
 
 **프로그래머가 주절거리는 독백에서 크게 벗어나지 못한다.** <!-- .element: class="fragment" -->
 
@@ -852,7 +858,10 @@ catch 블록에 있는 주석은 저자에게야 의미가 있겠지만,
 
 저 주석의 의미를 알아내려면 다른 코드를 뒤져보는 수밖에 없다.
 
-**이해가 안되어 다른 모듈까지 뒤져야 하는 주석은 제대로 된 주석이 아니다.** <!-- .element: class="fragment" -->
+<div class="fragment">
+**이해가 안되어 다른 모듈까지 뒤져야 하는 주석은**
+**제대로 된 주석이 아니다.**
+</div>
 
 -----
 
@@ -901,9 +910,9 @@ public synchronized void waitForClose(final long timeoutMillis) throws Exception
 
 -----
 
-주석에 담긴 '살짝 잘못된 정보'로 인해 어느 프로그래머가
+주석에 담긴 *살짝 잘못된 정보*로 인해 어느 프로그래머가
 
-경솔하게 함수를 호출에 자기 코드가 아주 느려진 이유를 못찾게 되는 것이다.
+*경솔하게 함수를 호출*해 아주 느려진 이유를 못찾게 되는 것
 
 -----
 
@@ -918,9 +927,13 @@ public synchronized void waitForClose(final long timeoutMillis) throws Exception
 
 혼동과 무질서를 초래한다.
 
-------
+
+-----
+
 
 #### 가치 없는 주석
+
+
 ```java
 /**
  *
@@ -941,7 +954,9 @@ public void addCD(String title, String author, int tracks, int durationInMinutes
 
 -----
 
-#### 이력을 기록하는 주석    
+#### 이력을 기록하는 주석 
+
+
 *지금은 소스 코드 관리 시스템이 있으니 전혀 필요없다.*
 
 ````java
@@ -967,7 +982,6 @@ protected AnnualDateRule() {
 ```
 
 -----
-
 
 #### 함수나 변수로 표현할 수 있다면 주석을 달지 마라    
 
@@ -999,14 +1013,11 @@ if (moduleDependees.contains(ourSubSystem))
 
 -----
 
-
-<div>
-
 이런 주석은 가독성만 낮춘다
 
-너무 자주 사용하지 않을때만 배너는 눈에 띄며 주위를 환기한다.
+너무 자주 사용하지 않을때만 
 
-</div>
+배너는 눈에 띄며 주위를 환기한다.
 
 <div class="fragment">그러므로 <span class="yellow">반드시 필요할 때 아주 드몰게 사용</span>하는 편이 좋다.<div>
 
@@ -1028,12 +1039,11 @@ if (moduleDependees.contains(ourSubSystem))
 
 <div>소스 코드 관리 시스템의 Annotate기능으로 대체가능</div>
 
-````java
+```java
 /* 릭이 추가함 */
-````
+```
 
 -----
-
 
 #### 주석으로 처리한 코드    
 
@@ -1051,7 +1061,8 @@ if (writeImageData()) {
 }
 return this.pngBytes;
 ```
-소스 코드 관리 시스템을 사용하기 때문에 우리를 대신에 코드를 기억해준다.
+
+소스 코드 관리 시스템을 사용하기 때문에
 
 *그냥 삭제하라. 잃어버릴 염려는 없다. 약속한다.*
 
@@ -1086,4 +1097,5 @@ public void setFitnessePort(int fitnessePort) {
 공개 API는 Javadocs가 유용하지만 공개하지 않을 코드라면 Javadocs는 쓸모가 없다.
 
 <div>코드만 보기싫고 산만해질 뿐이다.</div>
+
 
