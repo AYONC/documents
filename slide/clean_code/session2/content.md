@@ -545,7 +545,7 @@ Error.java 의존성 자석이 생긴다.  <!-- .element: class="fragment" -->
 
 ## 반복하지 마라! DRY<small>Don't repeat yourself</small>
 
-<div>중복은 모든 소프트웨어에서 **모든 악의 근원••이므로 늘 중복을 없애도록 노력해야한다.</div>
+<div>중복은 모든 소프트웨어에서 **모든 악의 근원**이므로 늘 중복을 없애도록 노력해야한다.</div>
 
 -----
 
@@ -642,6 +642,7 @@ Error.java 의존성 자석이 생긴다.  <!-- .element: class="fragment" -->
 주석 없이는 자신을 표현할 방법을 찾지 못해 *할 수 없이 주석을 사용*
 
 -----
+
 ### 결국...
 
 > 개발자는 코드로 말한다
@@ -711,11 +712,12 @@ if (employee.isEligibleForFullBenefits())
 protected abstract Responder responderInstance();
 ```
 
+**물론 이 주석도 함수 이름에 정보를 담아**
+**responderBeingTested로 바꾸면 없앨 수 있다. **
+
 -----
 
-**물론 이 주석도 함수 이름에 정보를 담아 responderBeingTested로 바꾸면 없앨 수 있다. **
-
-  더 나은 예:
+*  더 나은 예:
 ```java
 // kk:mm:ss EEE, MMM dd, yyyy 형식이다.
 Pattern timeMatcher = Pattern.compile("\\d*:\\d*\\d* \\w*, \\w*, \\d*, \\d*");
@@ -735,7 +737,7 @@ for (int i = 0; i > 2500; i++) {
 }
 ```
 
-<div>함수의 이름으로 표현하는 것보다 분명한 경우 주석</div>
+<div>함수의 이름으로 표현하는 것보다 주석이 분명한 경우</div>
 
 -----
 
@@ -763,7 +765,8 @@ protected VersionInfo makeVersion() throws Exception {
 
 -----
 
-<div> TODO 주석은 프로그래머가 필요하다 여기지만 당장 구현하기 어려운 업무를 기술한다.</div>
+<div>TODO 주석은 프로그래머가 필요하다 여기지만,</div>
+<div>당장 구현하기 어려운 업무를 기술한다.</div>
 
 * 더 이상 필요 없는 기능을 삭제하라는 알림,
 
@@ -773,7 +776,7 @@ protected VersionInfo makeVersion() throws Exception {
 
 * 앞으로 발생할 이벤트에 맞춰 코드를 고치라는 주의 등에 유용
 
-*요즘은 IDE가 남은 TODO를 쉽게 볼 수 있으므로 편리하게 이용할 수 있음*
+*요즘은 IDE가 남은 TODO를 쉽게 볼 수 있으므로 용이함*
 
 -----
 
@@ -797,9 +800,13 @@ return buildList(text.substring(match.end()));
 
 공개 API를 구현한다면 반드시 훌륭한 Javadocs 작성을 추천한다.
 
-*하지만 여느 주석과 마찬가지로 Javadocs 역시 독자를 오도하거나,
+하지만 여느 주석과 마찬가지로,
 
-잘못 위치하거나, 그릇된 정보를 전달할 가능성이 존재하는 것 역시 잊으면 안 된다.*
+*독자를 오도하거나,*
+
+*잘못 위치하거나, *
+
+*그릇된 정보를 전달할 가능성이 존재하는 것 역시 잊으면 안 된다.*
 
 -----
 
@@ -810,11 +817,11 @@ return buildList(text.substring(match.end()));
 
 <div>대다수의 주석이 이 범주에 속한다.</div>
 
-일반적으로 대다수 주석은 허술한 코드를 지탱하거나, <!-- .element: class="fragment" -->
+<div class="fragment">일반적으로 대다수 주석은 <span class="yellow">허술한 코드를 지탱</span>하거나,</div>
 
-엉성한 코드를 변명하거나, <!-- .element: class="fragment" -->
+<div class="fragment"><span class="yellow">엉성한 코드를 변명</span>하거나,</div>
 
-미숙한 결정을 합리화 <!-- .element: class="fragment" -->
+<span class="yellow">미숙한 결정을 합리화</span><!-- .element: class="fragment" -->
 
 **프로그래머가 주절거리는 독백에서 크게 벗어나지 못한다.** <!-- .element: class="fragment" -->
 
@@ -822,7 +829,8 @@ return buildList(text.substring(match.end()));
 -----
 
 #### 주절거리는 주석    
-특별한 이유 없이 달리는 주석이다. 
+
+<div>특별한 이유 없이 달리는 주석이다. </div>
 
 ```java
 public void loadProperties() {
@@ -838,7 +846,9 @@ public void loadProperties() {
 
 -----
 
-catch 블록에 있는 주석은 저자에게야 의미가 있겠지만 다른 사람들에게는 전해지지 않는다.
+catch 블록에 있는 주석은 저자에게야 의미가 있겠지만,
+
+다른 사람들에게는 전해지지 않는다.
 
 저 주석의 의미를 알아내려면 다른 코드를 뒤져보는 수밖에 없다.
 
@@ -983,9 +993,9 @@ if (moduleDependees.contains(ourSubSystem))
 
 * 소스 파일에서 특정 위치를 표시하려 주석을 사용
 
-````java
+```java
 // Actions /////////////////////////////////////////////
-````
+```
 
 -----
 
