@@ -281,6 +281,8 @@ includeSuiteSetupPage
 includeSetupPage
 ```
 
+-----
+
 <h5> 서술적인 이름을 사용하면 설계가 뚜렸해지므로 코드를 개선하기 쉬워진다.</h5>
 
 -----
