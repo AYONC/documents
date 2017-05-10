@@ -60,7 +60,6 @@ public static String testableHtml(PageData pageData, boolean includeSuiteSetup) 
   return pageData.getHtml();
 }
 ```
-<!-- .element: style="height:1200px" -->
 
 
 
@@ -82,7 +81,7 @@ public static String testableHtml(PageData pageData, boolean includeSuiteSetup) 
 
 <!-- .slide: data-background="#e7ad52" -->
 
-**그렇다면 읽시 쉽고 이해하기 쉬운 함수는 어떻게 작성해야하는가?**
+<h5>그렇다면 읽시 쉽고 이해하기 쉬운 함수는 어떻게 작성해야하는가?</h5>
 
 -----
 
@@ -115,7 +114,9 @@ public static String renderPageWithSetupsAndTeardowns( PageData pageData, boolea
 
 -----
 
- 위 코드도 길다. 되도록 한 함수당 3~5줄 이내로 줄이는 것을 권장한다
+ 위 코드도 길다.
+
+되도록 한 함수당 3~5줄 이내로 줄이는 것을 권장한다 <!-- .element: style="color: #ffffff" -->
 
 -----
 
@@ -131,11 +132,11 @@ public static String renderPageWithSetupsAndTeardowns( PageData pageData, boolea
 
 #### 블록과 들여쓰기  
 
-중첩구조(if/else, while문 등)에 들어가는 블록은 한 줄이어야 한다. 
+* 중첩구조(if/else, while문 등)에 들어가는 블록은 한 줄이어야 한다.
 
-각 함수 별 들여쓰기 수준이 2단을 넘어서지 않고,
+* 각 함수 별 들여쓰기 수준이 2단을 넘어서지 않고,
 
-각 함수가 명백하다면 함수는 더욱 읽고 이해하기 쉬워진다.
+* 각 함수가 명백하다면 함수는 더욱 읽고 이해하기 쉬워진다.
 
 -----
 
@@ -152,13 +153,13 @@ public static String renderPageWithSetupsAndTeardowns( PageData pageData, boolea
 
 -----
 
-한가지를 한다는 것?
+<h4>한가지를 한다는 것?</h4>
 
-지정된 함수 이름 아래에서
+지정된 함수 이름 아래에서 <!-- .element: style="color: #ffffff" -->
 
-추상화 수준이 하나인 단계만 수행한다면
+<span class="yellow">추상화 수준이 하나인 단계만 수행</span>한다면 <!-- .element: style="color: #ffffff" -->
 
-그 함수는 한 가지 작업만 하는 것이다.
+그 함수는 한 가지 작업만 하는 것이다. <!-- .element: style="color: #ffffff" -->
 
 -----
 
