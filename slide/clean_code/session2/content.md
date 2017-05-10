@@ -662,7 +662,7 @@ Error.java 의존성 자석이 생긴다.  <!-- .element: class="fragment" -->
 
 코드에 주석을 추가하는 일반적인 이유
 
-    <spen class="yellow">코드 품질이 나빠서</span>
+    <span class="yellow">코드 품질이 나빠서</span>
 
 <div>깔끔하고 주석이 거의 없는 코드가,</div>
 <div>복잡하고 어수선하며 주석이 많이 달린 코드보다 훨씬 좋다.</div>
@@ -677,6 +677,7 @@ Error.java 의존성 자석이 생긴다.  <!-- .element: class="fragment" -->
 // 직원에게 복지 혜택을 받을 자격이 있는지 검사한다. 
 if ((emplotee.flags & HOURLY_FLAG) && (employee.age > 65)
 ```
+
 -----
 
 ```java
@@ -908,6 +909,7 @@ public synchronized void waitForClose(final long timeoutMillis) throws Exception
 혼동과 무질서를 초래한다.
 
 ------
+
 #### 가치 없는 주석
 ```java
 /**
