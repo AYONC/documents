@@ -105,7 +105,7 @@ Reveal.initialize({
         },
 
         // Syntax highlight for <code> elements
-        { src: '../../reveal.js-3.5.0/plugin/highlight/highlight.js', async:true, callback: function() { hljs.initHighlightingOnLoad(); }
+        { src: '../../reveal.js-3.5.0/plugin/highlight/highlight.pack.js', async:true, callback: function() { hljs.initHighlightingOnLoad(); }
         },
 
         // Zoom in and out with Alt+click
