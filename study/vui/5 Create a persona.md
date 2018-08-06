@@ -1,0 +1,111 @@
+# 5. Create a persona
+#study/vui
+
+[Create a persona - Conversation design process - Conversation design](https://designguidelines.withgoogle.com/conversation/conversation-design-process/create-a-persona.html)
+
+Think of your persona as the front end of your Action, i.e., the conversational partner you create to interact directly with users. Defining a clear system persona is vital to ensuring a consistent user experience that builds user trust.
+사용자와 직접적으로 상호 작용하기 위해 생성하는 대화 상대인 행동의 맨 앞 끝으로 자신의 성격을 생각해 보자. 명확한 시스템 개인 설정을 정의하는 것은 사용자 신뢰를 구축하는 일관된 사용자 환경을 보장하는 데 필수적이다.
+
+## Why use a persona?
+A persona is a design tool that helps you write conversations. Before you can write a dialog, you have to have a clear picture of who is communicating. A good persona evokes a distinct tone and personality, and it’s simple enough to keep top-of-mind when writing dialog. It should be easy to answer the question: “What would this persona say or do in this situation?”.
+개인 설정은 대화를 작성할 수 있도록 도와 주는 디자인 도구입니다. 대화 상자를 작성하기 전에 먼저 대화 상대에 대한 명확한 그림을 그려야 합니다. 좋은 사람은 독특한 어조와 성격을 불러 일으키며, 대화를 쓸 때 주의력을 충분히 유지할 수 있습니다. "이 상황에서 이 사람은 무엇을 말하고 행동할까?"라는 질문에 대답하는 것은 쉬워야 합니다.
+
+Users will project a persona onto your Action whether you plan for one or not. So it's in your best interest to purposefully design the experience you want users to perceive, instead of leaving it up to chance.
+사용자들은 당신이 그것을 계획하든 계획하지 않든 당신의 행동에 인격을 투영할 것입니다. 따라서 사용자가 인지하기를 원하는 경험을 우연에 맡기는 대신 고의로 설계하는 것이 가장 좋습니다.
+
+⚠️ The goal of creating a persona is not to trick the user into thinking they're talking to a human being, ::but simply to leverage the communication system users learned first and know best: conversation.:: ⚠️
+⚠️ 퍼소나를 만드는 목적은 사용자를 속여 자신이 인간과 대화하고 있다고 생각하게 하는 것이 아니라 사용자가 가장 먼저 배우고 가장 잘 알게 되는 통신 시스템인 컨버사이션을 활용하는 것이다.⚠️
+
+## How do I create one?
+Your persona can help provide users with a mental model for what your Action can do and how it works by starting with what users already know. For example, in a banking application, the persona could be modeled after an idealized bank teller—trustworthy with customers’ money and personal information. The metaphor of the bank teller makes this new experience feel familiar, since users’ real-world banking knowledge can guide them.
+
+사용자의 개인 설정은 사용자가 이미 알고 있는 작업부터 시작하여 사용자가 수행할 수 있는 작업과 작동 방식에 대한 정신적 모델을 제공할 수 있습니다. 예를 들어, 은행 애플리케이션에서 고객의 돈과 개인 정보를 사용하는 신뢰할 수 있는 은행 전화기를 사용하여 개인 정보를 모델링 할 수 있습니다. 은행원의 은유는 사용자의 실제 금융 지식이 그들을 안내할 수 있기 때문에 이 새로운 경험을 친숙하게 만든다.
+
+### Follow these steps to create your persona:
+#### Step 1
+- Brainstorm a list of adjectives (e.g., friendly, technologically competent). Focus on the qualities you want users to perceive when talking to your Action.
+- 형용사 목록을 작성합니다(예: 친근하고 기술적으로 유능함). 사용자가 사용자의 작업에 대해 인식하기를 원하는 품질에 초점을 맞춥니다.
+#### Step 2
+- Narrow your list down to 4-6 key adjectives that describe your persona’s core personality traits.
+- 목록을 4~6개의 주요 형용사로 좁혀 보세요.
+#### Step 3
+- Come up with a few different characters who embody these qualities (e.g., a barista, a fashion icon, a world traveler). Your persona doesn’t have to be a person. It could also be an anthropomorphized animal, an alien, an artificial intelligence, a cartoon character, etc.
+- 이러한 특성을 구체화하는 몇가지 다른 캐릭터를 생각해 보세요(예:바리스타, 패션 아이콘, 세계 여행자). 여러분의 성격이 반드시 사람일 필요는 없습니다. 그것은 또한 신성 모독의 동물, 외계인, 인공 지능, 만화 캐릭터 등이 될 수 있다.
+#### Step 4
+- Choose one character that best embodies your Action and write a short description, no more than a paragraph. This description should provide a clear sense of what this persona is like, especially what it would say, write, or do.
+- 자신의 행동을 가장 잘 표현하는 캐릭터를 하나 선택하고 짧은 설명을 한 단락 이상 쓰지 마십시오. 이러한 설명은 이 인물이 어떤 사람인지, 특히 그것이 무엇을 말하고, 쓰고 또는 하는지에 대한 분명한 감각을 제공해야 한다.
+
+- Focus on personality traits, and avoid specifying things like gender or age because they almost never critically define or differentiate a persona. Furthermore, deciding the gender upfront will make it harder to find the right voice, since you’ve already eliminated half of the options.
+- 성격적 특성에 초점을 맞추고, 성격을 비판적으로 정의하거나 차별화하지 않기 때문에 성별이나 나이와 같은 것은 피하세요. 게다가, 성별을 먼저 결정하는 것은 올바른 목소리를 찾는 것을 더 어렵게 할 것이다. 왜냐하면 여러분은 이미 옵션의 절반을 제거했기 때문이다.
+#### Step 5
+- Find, or create, an image or two that visually represents your persona. Pictures are a great memory aid and can help you keep the persona in mind when writing dialog. If you create your own, consider using it as your Action’s logo so users can see it too.
+- 자신의 모습을 시각적으로 나타내는 한두개의 이미지를 찾거나 만듭니다. 사진은 좋은 기억력을 도와 주며 대화 상자를 쓸 때 개인 설정을 기억하도록 도와 줄 수 있습니다. 사용자가 직접 만든 경우 사용자도 볼 수 있도록 이 로고를 작업 로고로 사용하는 것이 좋습니다.
+
+## What voice should I choose?
+When people hear a voice, they instantly make assumptions about the speaker’s gender, age, social status, emotional state, and place of origin, as well as personality traits like warmth, confidence, intelligence, etc. People can’t help but do this with virtual assistants, too—so guide the assumptions they make about your Action by choosing a voice that is consistent with your persona.
+사람들이 목소리를 들을 때, 그들은 즉시 화자의 성별, 나이, 사회적 지위, 감정적 상태 그리고 출신의 장소뿐만 아니라 따뜻함, 자신감과 같은 성격적 특징에 대해서 추측한다.텔리전스 등 사람들은 가상 보조원을 통해 이렇게 할 수밖에 없으므로, 사용자의 성격과 일치하는 음성을 선택하여 사용자의 행동에 대한 가정을 제시합니다.
+
+### There are 2 types of voices:
+- Synthesized
+	- The Actions on Google platform provides a variety of text-to-speech (TTS) voices that speak different languages. Go to Languages and Locales to hear them. Note that you can adjust the way the synthesized speech sounds by using Speech Synthesis Markup Language (SSML). For example, you may want to add silence or pauses, specify how numbers should be read, or adjust the intonation.
+	- Pros
+		- Hear prompts as soon as you’ve written them
+		- Make quick and easy edits
+		- Localization is built-in
+	- Cons
+		- Can sound unnatural or robotic
+		- Less expressive. Difficult to convey humor, sarcasm, etc.
+		- Few voices to choose from
+
+- 합성
+	- Google플랫폼의 액션은 서로 다른 언어를 사용하는 다양한 TTS(Text-to-Speech)음성을 제공합니다. 언어 및 지역으로 이동하여 들어 보십시오. SSML(SpeedingSynthesisMarkupLanguage)을 사용하여 합성된 음성이 들리는 방식을 조정할 수 있습니다. 예를 들어, 침묵 또는 일시 중지를 추가하거나 숫자를 읽는 방법을 지정하거나 억양을 조정할 수 있습니다.
+	- 장점
+		- 메시지를 작성하는 즉시 안내를 듣습니다.
+		- 쉽고 빠르게 편집
+		- 지역화 기본 제공
+	- 단점
+		- 부자연스럽게 들리거나 로봇처럼 들릴 수 있음
+		- 덜 표현적인 독자 유머, 풍자 등을 전달하기가 어렵다.
+		- 선택할 수 있는 목소리가 거의 없다.
+- Recorded
+	- You can hire a professional voice actor, or even try using your own voice. Either way, you’ll need to record all the audio that will be used in your Action.
+	- Pros
+		- Natural and human
+		- Very expressive. Can convey humor, sarcasm, etc.
+		- Unlimited voices to choose from
+	- Cons
+		- Edits require re-recording
+		- Recordings have to be localized
+		- Requires robust management system for audio files
+		
+- 기록됨
+	- 전문적인 성우를 고용할 수도 있고 자신의 목소리를 사용해 볼 수도 있다. 어느 쪽이든, 사용자의 작업에 사용될 모든 오디오를 녹음해야 합니다.
+	- 장점
+		- 자연과 인간
+		- 매우 표현력이 풍부합니다. 유머, 풍자 등을 전달할 수 있다.
+		- 선택할 수 있는 무제한 음성
+	- 단점
+		- 편집하려면 다시 기록해야 합니다.
+		- 기록은 현지화해야 함
+		- 오디오 파일을 위한 강력한 관리 시스템 필요
+
+### Choose the best voice for your persona by holding an audition.
+#### Step 1
+- Write a few spoken prompts that your persona would say. Or better yet, write a sample dialog. These will be the lines used for the audition.
+- 자신의 퍼소나가 말할 몇가지 프롬프트를 적습니다. 또는 샘플 대화 상자를 작성하는 것이 좋습니다. 이것들은 오디션에 사용될 대사들이 될 것이다.
+#### Step 2
+- If you’re auditioning TTS voices, render your lines in each voice.
+- TTS목소리를 듣고 싶다면, 각 목소리로 대사를 하세요.
+- If you’re auditioning voice actors, tell them about what your Action does and give them your persona description and key adjectives so they understand the character they’re embodying. Then record them reading the lines.
+- 만약 여러분이 목소리 연기자들을 오디션하고 있다면, 그들에게 여러분의 행동에 대해서 말하고 그들이 구현하고 있는 캐릭터를 이해할 수 있도록 여러분의 개인적인 설명과 주요 형용사를 주세요. 그리고 나서 그들이 줄을 읽는 것을 기록하세요.
+#### Step 3
+- Create a scorecard using the key adjectives that describe your persona. The goal is to rate how well a voice conveys each adjective using a 5-point scale, with 1 meaning “not very well” and 5 meaning “very well”.
+- 자신의 성격을 설명하는 주요 형용사를 사용하여 점수표를 만듭니다. 목표는 음성이 5점 척도를 사용하여 각 형용사를 얼마나 잘 전달하는지 평가하는 것인데, 1은 "그다지 잘"은 아니고 5는 "매우 잘"를 의미한다.
+
+#### Step 4
+- Organize a listening party with your friends or colleagues. Audition each voice and rate them on the scorecard. Focus on the voice by just listening—don’t read along. It helps to close your eyes and try to imagine the speaker.
+- 친구 또는 동료와 함께 듣기 파티를 구성합니다. 각 음성을 오디션하고 점수표에 점수를 매깁니다. 그냥 듣기만 하면 음성에 집중하세요. 알아들을 수 없어요. 그것은 눈을 감고 연설자를 상상하는 것을 도와 줍니다.
+#### Step 5
+- Review the ratings and choose the winner! If there’s a tie, listen to the voices again, this time rating them against your short persona description.
+- 시청률을 검토하고 수상자를 선택하세요! 만약 넥타이가 있다면, 목소리를 다시 들어 보세요, 이번에는 여러분의 짧은 성격 묘사에 대해 그들을 평가하세요.
+
